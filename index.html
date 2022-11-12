@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="calculator-page">
+      <div class="calculator">
+        <input type="text" placeholder="0" id="userInput" />
+        <button onclick="sqrt()">√</button>
+        <button onclick="output('**')">x^y</button>
+        <button onclick="output('%')">%</button>
+        <button onclick="output('/')">/</button>
+        <button onclick="output('7')">7</button>
+        <button onclick="output('8')">8</button>
+        <button onclick="output('9')">9</button>
+        <button onclick="output('*')">*</button>
+        <button onclick="output('4')">4</button>
+        <button onclick="output('5')">5</button>
+        <button onclick="output('6')">6</button>
+        <button onclick="output('-')">-</button>
+        <button onclick="output('1')">1</button>
+        <button onclick="output('2')">2</button>
+        <button onclick="output('3')">3</button>
+        <button onclick="output('+')">+</button>
+        <button onclick="output('.')">.</button>
+        <button onclick="output('0')">0</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="Clear()">AC</button>
+      </div>
+    </div>
+
+    <script>
+      let input = document.getElementById("userInput");
+
+      function output(num) {
+        input.value += num;
+      }
+
+      //evaluates the input math expression
+      function calculate() {
+        try {
+          input.value = eval(input.value);
+        } catch (err) {
+          alert("Invalid");
+        }
+      }
+
+      //clears the input screen
+      function sqrt() {
+        input.value = Math.sqrt(input.value);
+      }
+
+      function Clear() {
+        input.value = "";
+      }
+    </script>
+  </body>
+</html>

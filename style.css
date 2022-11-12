@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #c4ede0;
+  font-family: monospace;
+  outline: none;
+}
+
+/* refers to div class page */
+.calculator-page {
+  /* 100 vh represents 100% of the view ports height  */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* refers to div class calculator */
+.calculator {
+  background-color: #c4ede0;
+  padding: 15px;
+  border-radius: 30px;
+  /* box shadow is used for neumorphic effect*/
+  box-shadow: 20px 20px 60px #a7c9be, -20px -20px 60px #e1ffff;
+  display: grid;
+  grid-template-columns: repeat(4, 68px);
+}
+
+input {
+  grid-column: span 4;
+  height: 70px;
+  width: 260px;
+  background-color: #d1f5ea;
+  box-shadow: 5px 5px 10px #a7c9be, -5px -5px 10px #e1ffff;
+  border: none;
+  border-radius: 30px;
+  color: rgb(100, 100, 100);
+  font-size: 50px;
+  text-align: end;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+button {
+  height: 48px;
+  width: 48px;
+  background-color: #d1f5ea;
+  box-shadow: 5px 5px 10px #a7c9be, -5px -5px 10px #e1ffff;
+  border: none;
+  border-radius: 50%;
+  margin: 8px;
+  color: rgb(100, 100, 100);
+  font-size: 20px;
+}
